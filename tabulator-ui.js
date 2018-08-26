@@ -74,7 +74,10 @@
 						m('span.delete-link', { onclick: function () {
 							tabs.vm.rmGroup(i);
 						} }),
-						m('span.group-date', { title: moment(group.date()).format('MMMM Do YYYY, H:mm') }, moment(group.date()).fromNow() ),
+						m('span.group-date', { title: moment(group.date()).format('MMMM Do YYYY, H:mm'),
+                                               onclick: function() {
+                                                 console.log("Title Clicked!!")
+                                               } }, moment(group.date()).fromNow() ),
 						' ',
 						m('span.group-amount', group.tabs().length + ' tab' + (group.tabs().length===1?'':'s')),
 						' ',
